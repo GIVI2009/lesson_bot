@@ -1,0 +1,13 @@
+
+@dp.message(CommandStart())
+async def command_start_handler(message: types.Message):
+    await message.answer(f"Привет, {message.from_user.full_name}!")
+    await message.answer("Выберите кнопку:", reply_markup=kb_builder.as_markup())
+
+
+
+
+kb_builder = keyboard.ReplyKeyboardBuilder()
+kb_builder.button(text="Кіт_random_photo")
+kb_builder.button(text="Пес_random_photo")
+kb_builder.button(text="Остров_random_photo")

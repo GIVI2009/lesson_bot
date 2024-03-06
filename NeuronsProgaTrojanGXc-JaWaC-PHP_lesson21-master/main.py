@@ -79,6 +79,9 @@ async def maybe_help(message: types.Message):
     await message.answer("или ilend, остров, острів, островок")
     await message.answer("и фоворит capybaras, капибара, Чил, капібара, какібара, какибара")
 
+
+
+
 @dp.message()
 async def send_random_animal_picture(message: types.Message):
     text = message.text.lower()
